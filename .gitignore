@@ -1,0 +1,6 @@
+/target
+/.idea
+/target/test-classes
+/target/test-classes/java
+/target/test-classes/java/com
+/target/test-classes/java/com/example
