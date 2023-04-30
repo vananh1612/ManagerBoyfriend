@@ -250,11 +250,9 @@ public class UserService implements DaoInterface<User> {
 
     public static void main(String[] args) throws SQLException {
         UserService userService = new UserService();
-        User user = new User();
-        user.setUsername("admin2");
-        user.setPassword("admin");
-        user.setEmail("admin2");
-        user.setRole("admin");
-        System.out.println(userService.create(user));
+        ArrayList<User> users = userService.getAll();
+        for (User user : users) {
+            System.out.println(user);
+        }
     }
 }
