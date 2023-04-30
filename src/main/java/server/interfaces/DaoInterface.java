@@ -80,5 +80,5 @@ public interface DaoInterface<T> {
      * @return Một đối tượng dữ liệu theo field
      * @throws SQLException nếu có vấn đề khi tìm kiếm dữ liệu theo field.
      */
-    ArrayList<T> search(String field, String value) throws SQLException;
+    ArrayList<T> search(String field, String value, boolean findAll) throws SQLException;
 }
