@@ -21,9 +21,4 @@ public class ConnectDatabase {
         }
         return conn;
     }
-
-    static {
-        conn = getConnection();
-    }
-
 }
