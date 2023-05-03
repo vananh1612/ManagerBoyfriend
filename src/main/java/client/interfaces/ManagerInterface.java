@@ -1,10 +1,9 @@
-package server.interfaces;
-
-import java.rmi.Remote;
-import java.lang.Exception;
-import java.util.ArrayList;
+package client.interfaces;
 
 import shared.models.Notification;
+
+import java.rmi.Remote;
+import java.util.ArrayList;
 
 public interface ManagerInterface<T> extends Remote {
 
@@ -15,7 +14,7 @@ public interface ManagerInterface<T> extends Remote {
      * @return trả về một đối tượng Notification để chứa thông tin về việc tạo đối
      * tượng mới.
      * @throws Exception nếu có vấn đề xảy ra trong khi giao tiếp với máy chủ
-     *                         từ xa.
+     *                   từ xa.
      */
     Notification<T> create(T data) throws Exception;
 

@@ -1,9 +1,9 @@
-package server.interfaces;
-
-import java.util.ArrayList;
+package client.interfaces;
 
 import shared.models.Notification;
 import shared.models.User;
+
+import java.util.ArrayList;
 
 public interface UserManagerInterface extends ManagerInterface<User> {
 
