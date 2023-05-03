@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class UserManager extends UnicastRemoteObject implements UserManagerInterface {
 
-    private DaoInterface<User> userService;
+    private final UserService userService;
 
-    public UserManager(DaoInterface userService) throws RemoteException {
+    public UserManager(UserService userService) throws RemoteException {
         this.userService = userService;
     }
 
@@ -58,6 +58,16 @@ public class UserManager extends UnicastRemoteObject implements UserManagerInter
     @Override
     public ArrayList<User> search(String field, String value, boolean findAll) throws RemoteException, SQLException {
         return this.userService.search(field, value, findAll);
+    }
+
+    @Override
+    public Notification<User> login(String username, String password) throws Exception {
+        return this.userService.login(username, password);
+    }
+
+    @Override
+    public Notification<User> register(String username, String password) throws Exception {
+        return this.userService.register(username, password);
     }
 
 
